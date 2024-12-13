@@ -16,11 +16,7 @@ public class main {
         double totalSalary = 0;
         double totalPESalary = 0;
         for(Employee employee : emp){
-            if (employee instanceof FulltimeEmployee){
-                totalSalary += ((FulltimeEmployee) employee).getIncome();
-            } else if (employee instanceof ParttimeEmployee){
-                totalSalary += ((ParttimeEmployee) employee).getIncome();
-            }
+            totalSalary += employee.getIncome();
         }
         double averageSalary = totalSalary/emp.length;
         for(ParttimeEmployee employee : pe){
